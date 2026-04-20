@@ -12,7 +12,12 @@ app.get('', (req, res) => {
 })
 
 app.get('/profile', (req, res) => {
-    res.render('profile');
+    const user = {  
+        name: 'Ankita',
+        email: 'ank@gmail.com',
+        city: 'Delhi'
+    };
+    res.render('profile', { user });
 })
 
 app.get('/about', (req, res) => {
