@@ -15,7 +15,8 @@ app.get('/profile', (req, res) => {
     const user = {  
         name: 'Ankita',
         email: 'ank@gmail.com',
-        city: 'Delhi'
+        city: 'Delhi',
+        skills: ['HTML', 'CSS', 'JavaScript','python']
     };
     res.render('profile', { user });
 })
@@ -28,8 +29,14 @@ app.get('/contact', (req, res) => {
     res.sendFile(`${publicPath}/contact.html`);
 })
 
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
 app.use((req, res) => {
     res.sendFile(`${publicPath}/nopage.html`);
 })
+
+
 
 app.listen(3000)
