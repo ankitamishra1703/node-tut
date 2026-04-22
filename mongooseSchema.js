@@ -5,10 +5,11 @@ const main = async () => {
     const productSchema = new mongoose.Schema({
         name: String,  
         age: Number,      
+        email: String,
     });
 
     const productModel = mongoose.model("product", productSchema);
-    let data = new productModel({name:"Nirmal",age:30});
+    let data = new productModel({name:"Nirmal",age:30,email:"nirmal@gmail.com"});
 
     let res = await data.save();
     console.log(res);
