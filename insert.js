@@ -1,7 +1,5 @@
 const dbConnect = require('./mongodb');
 
-
-
 const insert = async () => {
     let data = await dbConnect();
     let result = await data.insertMany([

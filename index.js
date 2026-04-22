@@ -4,7 +4,6 @@ const colors = require('colors');
 const chalk = require('chalk');
 
 
-
 console.log("hello".blue);
 console.log(chalk.blue('Hello world!'));
 
